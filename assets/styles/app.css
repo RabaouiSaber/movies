@@ -1,0 +1,250 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    /* text-align: center; */
+}
+
+.header video {
+    width: 100%;
+    max-height: 300px; /* Ajustez la hauteur maximale selon vos besoins */
+    margin-top : 30px;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 400px;
+    background: #444;
+    color: black;
+    padding: 15px;
+    padding-top: 50px;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+.movie-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.movie-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    background: #eaeaea;
+    border-radius: 5px;
+}
+
+.movie-item img {
+    /*width: 150px;*/
+    height: auto;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.movie-item h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.movie-item p {
+    margin: 5px 0 0;
+    color: #666;
+}
+
+
+/*   */
+
+.search-container {
+    display: flex;
+    margin-left: auto; /* Place le conteneur à droite */
+    float: right;
+    margin-top: 60px;
+    margin-right: 150px;
+}
+input[type="search"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+button {
+    padding: 10px 15px;
+    border: none;
+    background: #0056b3;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+button:hover {
+    background: #004494;
+}
+.content {
+    padding: 20px;
+}
+
+.logo {
+    float: left;
+    margin-top: 50px;
+    margin-left: 200px;
+    font-size: 50px;
+}
+
+/*    filtre  */
+
+.genres{
+    font-size: 30px;
+
+}
+
+
+/** button lire detail */
+
+.button {
+    display: inline-block;
+    padding: 15px 20px;
+    border-radius: 20%;
+    background-color: #007BFF; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    text-align: center;
+    text-decoration: none; /* Pas de soulignement */
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3; /* Couleur au survol */
+}
+
+.pagination {
+    float:right;
+}
+
+
+.pagination a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff; /* Bootstrap primary color */
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.pagination a:disabled {
+    background-color: #ccc; /* Gray for disabled state */
+    color: #666;
+    cursor: not-allowed;
+}
+
+#autocomplete {
+    width: 300px; /* Largeur de l'input */
+    padding: 10px; /* Espacement intérieur */
+    border: 1px solid #ccc; /* Bordure */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre */
+    font-size: 16px; /* Taille de la police */
+    transition: border-color 0.3s; /* Transition de la couleur de la bordure */
+}
+
+#autocomplete:focus {
+    border-color: #007bff; /* Couleur de la bordure au focus */
+    outline: none; /* Suppression de l'outline par défaut */
+}
+
+.ui-autocomplete {
+    max-height: 200px; /* Hauteur maximale de la liste déroulante */
+    overflow-y: auto; /* Défilement si nécessaire */
+    z-index: 1000; /* S'assurer que la liste est au-dessus des autres éléments */
+}
+
+.ui-menu-item {
+    padding: 8px 12px; /* Espacement des éléments de la liste */
+    cursor: pointer; /* Curseur pointer */
+}
+
+.ui-menu-item:hover {
+    background-color: #007bff; /* Couleur de fond au survol */
+    color: white; /* Couleur du texte au survol */
+}
+
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.popup-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

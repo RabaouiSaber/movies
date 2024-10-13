@@ -1,0 +1,75 @@
+
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des Films{% endblock %}
+
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    {{ encore_entry_link_tags('app') }}
+{% endblock %}
+
+
+{% block body %}
+     <div id="pathGenre" data-url="{{ path('movie_genre') }}" style="display:none"></div>
+    <div id="currentPage" data-page="{{current_page}}" style="display:none"></div>
+    <div id="topMovieKey" data-key="{{topMovie.videoo[0].key}}" style="display:none"></div>
+
+
+    <header class="header">
+            <div id="search">
+                <div class="logo">We Movies</div>
+                <div class="search-container">
+                    <input id="autocomplete" type="text" placeholder="Rechercher..." aria-label="Rechercher">
+                </div>
+            </div>
+
+            <iframe width="100%" height="500" src="https://www.youtube.com/embed/{{topMovie.videoo[0].key}}" frameborder="0" allowfullscreen></iframe>
+    </header>
+
+
+
+    <div class="container">
+        
+        <div class="sidebar">
+            <fieldset>
+                <legend style="font-size: 25px;"><strong>Genres de Films</strong></legend>
+                <table id="filtreGenre">
+
+                </table>
+            </fieldset>
+        </div>
+
+
+        <main class="content">
+            <h1>Liste des Films</h1>
+            <ul class="movie-list">     
+                <!-- Ajoutez d'autres films ici -->
+            </ul>
+
+            <div class="pagination">
+                <a id ="suivant" style="float: right;">Suivant</a>
+                <a id ="precedent" {% if current_page == 1%} style="display:none;float: right;" {% endif%}>Précédent</a>
+                
+            </div>
+        </main>
+
+    <!-- popup -->
+    <div id="popup"></div>
+    <!-- fin popup  -->
+        
+    </div>
+
+    
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="{{ asset('bundles/fosjsrouting/js/router.min.js') }}"></script>
+    <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+
+    {{ encore_entry_script_tags('app') }}
+{% endblock %}

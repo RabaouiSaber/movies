@@ -1,0 +1,12 @@
+{
+  "name": "we-movie",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "encore dev",
+    "watch": "encore dev --watch",
+    "production": "encore production"
+  },
+  "devDependencies": {
+    "@symfony/webpack-encore": "^5.0.1"
+  }
+}
