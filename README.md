@@ -1,5 +1,23 @@
 # We Movies
 
+# Instalation :
+
+    1- git clone https://github.com/RabaouiSaber/movies.git
+
+    2- docker-compose up --build
+
+    3- docker exec -it symfony_app /bin/bash
+
+    4- composer install
+
+    5- npm install
+
+    6- npm run dev
+
+    7- ajouter le API_KEY de TheMovieDB dans le fichier .env
+
+ # Capture d'écran  
+ 
 ![image](https://github.com/user-attachments/assets/08e5ead0-67d3-46c0-a9ec-146c3b2765db)
 
 ![image](https://github.com/user-attachments/assets/377eab70-e6fb-42ff-9201-264c96cf5dc9)
