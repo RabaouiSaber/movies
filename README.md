@@ -16,6 +16,8 @@
 
     7- ajouter le API_KEY de TheMovieDB dans le fichier .env
 
+    8- accéder à 127.0.0.1:8080
+
  # Capture d'écran  
  
 ![image](https://github.com/user-attachments/assets/08e5ead0-67d3-46c0-a9ec-146c3b2765db)
