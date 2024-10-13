@@ -45,7 +45,9 @@ RUN composer install --no-dev --optimize-autoloader
 RUN composer install
 
 # Installer les dépendances Node
-# RUN npm install
+RUN npm install
+
+RUN npm run dev
 
 # Exposer le port
 EXPOSE 80
