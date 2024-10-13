@@ -1,5 +1,5 @@
 # Image PHP de base
-FROM php:8.1-apache
+FROM php:8.2-apache
 
 # Activer le module Apache pour PHP
 RUN docker-php-ext-install pdo pdo_mysql
